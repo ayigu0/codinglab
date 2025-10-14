@@ -21,7 +21,7 @@ class MainTest {
     }
 
     @Test
-    void exceptionTypeTest() {
+    void exceptionTypeTest() throws Exception {
         Exception bfe = new BreedFetcher.BreedNotFoundException("hound");
         assertTrue(bfe instanceof Exception && !(bfe instanceof RuntimeException),
                 "BreedFetcher.BreedNotFoundException must be a checked exception.");

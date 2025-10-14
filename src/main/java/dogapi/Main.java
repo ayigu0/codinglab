@@ -1,5 +1,6 @@
 package dogapi;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -26,6 +27,11 @@ public class Main {
     public static int getNumberOfSubBreeds(String breed, BreedFetcher breedFetcher) {
         // TODO Task 3 implement this code so that it is entirely consistent with its provided documentation.
         // return statement included so that the starter code can compile and run.
-        return -1;
+        try{
+            int result = breedFetcher.getSubBreeds(breed).size();
+            return result;
+        }catch(BreedFetcher.BreedNotFoundException e){
+            return 0;
+        }
     }
 }
